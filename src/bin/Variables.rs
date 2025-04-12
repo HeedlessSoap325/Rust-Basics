@@ -15,7 +15,7 @@ fn initialization(){
     //let x: i32; //This variable is uninitalized, but used => Error
 
     let x: i32 = 5;
-    let y: i32; //This variable is uninitialaized, but not used => Warning
+    let _y: i32; //This variable is uninitialaized, but not used => Warning
 
     assert_eq!(x, 5);
     println!("Success!");
@@ -67,6 +67,8 @@ fn shadowing(){
     println!("{}", x);
 }
 
+#[allow(unused_variables)]
+#[allow(unused_assignments)]
 fn shadowing2(){
     let mut x: i32 = 1;
     x = 7;
